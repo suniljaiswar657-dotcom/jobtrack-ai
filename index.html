@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090c">
+  <meta name="description" content="JOBTRACK AI — your career command center. Analyze resumes, track applications and prepare for interviews.">
+  <title>JOBTRACK AI — Career Command Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="JOBTRACK AI home"><span class="brand-mark">J<span>.</span></span><span>JOBTRACK <small>AI CAREER OS</small></span></a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav">
+        <button class="nav-link active" data-view="overview"><span>▦</span> Overview</button>
+        <button class="nav-link" data-view="resume"><span>▤</span> Resume Analyzer <i>NEW</i></button>
+        <button class="nav-link" data-view="applications"><span>▣</span> Applications</button>
+        <button class="nav-link" data-view="interview"><span>◉</span> Interview Prep</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="upgrade-card"><div class="upgrade-icon">✦</div><strong>Your next role starts here.</strong><p>Build momentum, one application at a time.</p><button data-view="applications">Track a job <span>↗</span></button></div>
+        <div class="profile"><div class="avatar">JD</div><div><strong>Job Seeker</strong><small>Free workspace</small></div><span class="profile-dots">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuToggle" aria-label="Toggle menu">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <strong id="crumb">Overview</strong></div>
+        <div class="top-actions"><span class="live-dot"></span><span class="saved-label">Your data stays on this device</span><button class="icon-btn" title="Notifications">♧</button><div class="avatar small-avatar">JD</div></div>
+      </header>
+
+      <section class="view active-view" id="overview-view">
+        <div class="welcome-row"><div><div class="eyebrow">MONDAY, YOUR NEXT CHAPTER</div><h1>Make your next move<span>.</span></h1><p class="subheading">A clearer view of your job search starts right here.</p></div><button class="primary-btn" data-view="applications">＋ Add application</button></div>
+        <div class="hero-panel"><div class="hero-copy"><div class="hero-tag"><span>✦</span> YOUR CAREER COMMAND CENTER</div><h2>Small steps.<br><em>Big career moves.</em></h2><p>Keep your applications organized, sharpen your resume, and walk into interviews with confidence.</p><button class="light-btn" data-view="resume">Analyze my resume <span>→</span></button></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit-core"><span>JT</span><small>CAREER<br>FOCUS</small></div><div class="float-card card-top"><span class="mini-check">✓</span><div><b>Stay organized</b><small>One clear plan</small></div></div><div class="float-card card-bottom"><span class="spark">✦</span><div><b>Keep moving</b><small>Progress over perfection</small></div></div></div></div>
+        <div class="section-heading"><div><div class="eyebrow">YOUR MOMENTUM</div><h2>Job search snapshot</h2></div><span class="muted">Updates as you track jobs</span></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span>Total applications</span><span class="stat-icon">▣</span></div><strong id="totalStat">0</strong><small>Roles you're pursuing</small></article>
+          <article class="stat-card"><div class="stat-top"><span>In progress</span><span class="stat-icon">◷</span></div><strong id="progressStat">0</strong><small>Waiting for the next step</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Interviews</span><span class="stat-icon">◉</span></div><strong id="interviewStat">0</strong><small>Conversations ahead</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Offers</span><span class="stat-icon">✧</span></div><strong id="offerStat">0</strong><small>Wins worth celebrating</small></article>
+        </div>
+        <div class="content-grid">
+          <section class="panel recent-panel"><div class="panel-heading"><div><div class="eyebrow">KEEP AN EYE ON</div><h3>Recent applications</h3></div><button class="text-btn" data-view="applications">View all →</button></div><div id="recentList" class="recent-list"><div class="empty-state"><div class="empty-icon">▤</div><b>Your next opportunity belongs here.</b><p>Add your first application to start building your pipeline.</p><button class="outline-btn" data-view="applications">＋ Add your first job</button></div></div></section>
+          <section class="panel quick-panel"><div class="eyebrow">YOUR NEXT STEP</div><h3>Make progress today.</h3><p>Pick one focused action and move your search forward.</p><button class="quick-action" data-view="resume"><span class="quick-icon">▤</span><span><b>Review your resume</b><small>Find ways to make it stronger</small></span><span>→</span></button><button class="quick-action" data-view="interview"><span class="quick-icon">◉</span><span><b>Practice an interview</b><small>Prepare your next great answer</small></span><span>→</span></button><button class="quick-action" data-view="applications"><span class="quick-icon">▣</span><span><b>Update your pipeline</b><small>Keep every opportunity in view</small></span><span>→</span></button></section>
+        </div>
+        <footer>JOBTRACK AI <span>·</span> Your career, in focus. <span class="footer-right">MVP · Data stored locally</span></footer>
+      </section>
+
+      <section class="view" id="resume-view">
+        <div class="page-intro"><div class="eyebrow">CAREER TOOLKIT / 01</div><h1>Resume <em>Analyzer.</em></h1><p class="subheading">Get a quick, practical review of your resume content.</p></div>
+        <div class="tool-layout"><section class="panel tool-panel"><div class="panel-heading"><div><h3>Paste your resume</h3><p class="muted">Text only for this first version. Remove personal contact details before pasting.</p></div><span class="step-pill">01 / INPUT</span></div><textarea id="resumeText" placeholder="Paste your resume text here…
+
+Include your summary, skills, experience, education and achievements for a more useful review."></textarea><div class="field-row"><label for="targetRole">Target role <span>(optional)</span></label><input id="targetRole" type="text" placeholder="e.g. Customer Support Executive"></div><div class="analyzer-actions"><span class="muted" id="wordCount">0 words</span><button class="primary-btn" id="analyzeBtn">Analyze resume <span>→</span></button></div><p class="fine-print">This MVP uses on-device text checks, not an AI model. It does not upload your resume.</p></section><section class="panel result-panel"><div class="eyebrow">02 / INSIGHTS</div><h3>Your resume review</h3><div id="resumeResult" class="result-placeholder"><div class="result-symbol">✦</div><b>Your insights will appear here.</b><p>Run an analysis to see content checks and suggestions.</p></div></section></div>
+      </section>
+
+      <section class="view" id="applications-view">
+        <div class="page-intro page-title-row"><div><div class="eyebrow">CAREER TOOLKIT / 02</div><h1>Application <em>tracker.</em></h1><p class="subheading">Every opportunity, one organized place.</p></div><button class="primary-btn" id="addJobBtn">＋ Add application</button></div>
+        <div class="filter-row"><div class="filter-tabs"><button class="filter-tab selected" data-filter="All">All jobs <span id="allCount">0</span></button><button class="filter-tab" data-filter="Applied">Applied</button><button class="filter-tab" data-filter="Interview">Interview</button><button class="filter-tab" data-filter="Offer">Offer</button><button class="filter-tab" data-filter="Rejected">Rejected</button></div><input id="jobSearch" class="search-input" placeholder="⌕  Search roles or companies"></div>
+        <section class="panel table-panel"><div class="table-wrap"><table><thead><tr><th>ROLE / COMPANY</th><th>DATE ADDED</th><th>STATUS</th><th>NOTES</th><th></th></tr></thead><tbody id="jobsTable"><tr><td colspan="5"><div class="empty-state"><div class="empty-icon">▣</div><b>No applications yet.</b><p>Add a role to start tracking your job search.</p></div></td></tr></tbody></table></div></section>
+        <footer>JOBTRACK AI <span>·</span> Your career, in focus. <span class="footer-right">Changes save on this device</span></footer>
+      </section>
+
+      <section class="view" id="interview-view">
+        <div class="page-intro"><div class="eyebrow">CAREER TOOLKIT / 03</div><h1>Interview <em>practice.</em></h1><p class="subheading">Build clear, confident answers before the real conversation.</p></div>
+        <div class="interview-layout"><section class="panel practice-panel"><div class="eyebrow">PRACTICE PROMPT</div><div class="question-number" id="questionNumber">QUESTION 01 / 08</div><h2 id="questionText">Tell me about yourself and your professional background.</h2><p class="muted">Use the space below to structure your answer. Try the STAR method for experience-based questions.</p><textarea id="answerText" placeholder="Start with a short professional introduction, then connect your experience to the role…"></textarea><div class="practice-actions"><button class="outline-btn" id="prevQuestion">← Previous</button><button class="primary-btn" id="nextQuestion">Next question →</button></div></section><aside class="panel tips-panel"><div class="eyebrow">ANSWER FRAMEWORK</div><h3>Use the STAR method</h3><div class="star-list"><div><b>S</b><span><strong>Situation</strong><small>Set the context.</small></span></div><div><b>T</b><span><strong>Task</strong><small>Explain your responsibility.</small></span></div><div><b>A</b><span><strong>Action</strong><small>Describe what you did.</small></span></div><div><b>R</b><span><strong>Result</strong><small>Share the outcome.</small></span></div></div><div class="tip-note">Be specific. Use real examples, clear actions and measurable results wherever possible.</div></aside></div>
+        <footer>JOBTRACK AI <span>·</span> Your career, in focus. <span class="footer-right">Practice at your own pace</span></footer>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="jobDialog" class="job-dialog"><form id="jobForm"><div class="dialog-head"><div><div class="eyebrow">NEW OPPORTUNITY</div><h2>Add an application</h2></div><button type="button" class="close-btn" id="closeDialog" aria-label="Close">×</button></div><label>Job title<input name="title" required maxlength="80" placeholder="e.g. Customer Support Executive"></label><label>Company<input name="company" required maxlength="80" placeholder="e.g. Acme Technologies"></label><div class="dialog-two"><label>Status<select name="status"><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select></label><label>Date<input name="date" type="date" required></label></div><label>Notes <span class="muted">(optional)</span><textarea name="notes" rows="3" maxlength="300" placeholder="Contact, follow-up date, job link…"></textarea></label><div class="dialog-actions"><button type="button" class="outline-btn" id="cancelDialog">Cancel</button><button type="submit" class="primary-btn">Save application</button></div></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
